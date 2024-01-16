@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2250%22 fill=%22%230058ff%22></rect><path fill=%22%23fff%22 d=%22M72.15 21.33L72.15 21.33Q74.49 22.50 74.90 25.02Q75.30 27.54 73.59 29.61L73.59 29.61Q72.42 31.23 70.58 31.41Q68.73 31.59 66.84 30.69L66.84 30.69Q64.68 29.70 62.30 29.16Q59.91 28.62 57.30 28.62L57.30 28.62Q52.44 28.62 48.62 30.15Q44.79 31.68 42.09 34.52Q39.39 37.35 38.00 41.22Q36.60 45.09 36.60 49.77L36.60 49.77Q36.60 55.26 38.18 59.31Q39.75 63.36 42.54 66.06Q45.33 68.76 49.11 70.07Q52.89 71.37 57.30 71.37L57.30 71.37Q59.73 71.37 62.16 70.92Q64.59 70.47 66.84 69.30L66.84 69.30Q68.73 68.40 70.58 68.67Q72.42 68.94 73.68 70.56L73.68 70.56Q75.48 72.81 74.99 75.20Q74.49 77.58 72.24 78.66L72.24 78.66Q69.90 79.83 67.43 80.60Q64.95 81.36 62.43 81.77Q59.91 82.17 57.30 82.17L57.30 82.17Q50.82 82.17 45.02 80.10Q39.21 78.03 34.67 73.98Q30.12 69.93 27.51 63.86Q24.90 57.78 24.90 49.77L24.90 49.77Q24.90 42.84 27.29 36.99Q29.67 31.14 34.04 26.87Q38.40 22.59 44.34 20.21Q50.28 17.82 57.30 17.82L57.30 17.82Q61.26 17.82 65.04 18.72Q68.82 19.62 72.15 21.33Z%22></path></svg>" />
+<meta charset="UTF-8">
+<meta http-equiv=“Pragma” content=”no-cache”>
+<meta http-equiv=“Expires” content=”-1″>
+<meta http-equiv=“CACHE-CONTROL” content=”NO-CACHE”>
+<!-- CSS Stylesheets -->
+<link rel="stylesheet" href="css/master.css">
+
+<title>API Project</title>
+</head>
+
+<body>
+    <img src="./images/banner.jpg" alt="" class="hero">
+    <h1>European Weather Forecast</h1>
+
+    <div class="section-description">
+        <div class="api">
+            <p><strong>Powered by : </strong> 
+                <a href="http://www.7timer.info/doc.php?lang=en" target="_blank" data-toggle="tooltip" data-placement="Top" title="Tap to visit 7Timer!">
+                    <span class="keyword-magnet">7Timer!</span>
+                </a>
+            </p>
+        </div>
+
+        <form id="query-form">
+            <select name="citySelected" id="citySelected" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Drop down and select a city to see the forecast">
+                <option disabled="" selected="" value=""> -- select an european city -- </option>
+                <option value="{&quot;lat&quot;:&quot;52.367&quot;,&quot;lon&quot;:&quot;4.904&quot;}">Amsterdam, Netherlands</option>
+                <option value="{&quot;lat&quot;:&quot;39.933&quot;,&quot;lon&quot;:&quot;32.859&quot;}">Ankara, Turkey</option>
+                <option value="{&quot;lat&quot;:&quot;56.134&quot;,&quot;lon&quot;:&quot;12.945&quot;}">Åstorp, Sweden</option>
+                <option value="{&quot;lat&quot;:&quot;37.983&quot;,&quot;lon&quot;:&quot;23.727&quot;}">Athens, Greece</option>
+                <option value="{&quot;lat&quot;:&quot;54.597&quot;,&quot;lon&quot;:&quot;-5.930&quot;}">Belfast, Northern Ireland, UK</option>
+                <option value="{&quot;lat&quot;:&quot;41.387&quot;,&quot;lon&quot;:&quot;2.168&quot;}">Barcelona, Spain</option>
+                <option value="{&quot;lat&quot;:&quot;52.520&quot;,&quot;lon&quot;:&quot;13.405&quot;}">Berlin, Germany</option>
+                <option value="{&quot;lat&quot;:&quot;46.948&quot;,&quot;lon&quot;:&quot;7.447&quot;}">Bern, Switzerland</option>
+                <option value="{&quot;lat&quot;:&quot;43.263&quot;,&quot;lon&quot;:&quot;-2.935&quot;}">Bilbao, Basque Country, Spain</option>
+                <option value="{&quot;lat&quot;:&quot;50.847&quot;,&quot;lon&quot;:&quot;4.357&quot;}">Brussels, Belgium</option>
+                <option value="{&quot;lat&quot;:&quot;47.497&quot;,&quot;lon&quot;:&quot;19.040&quot;}">Bucharest, Romania</option>
+                <option value="{&quot;lat&quot;:&quot;59.329&quot;,&quot;lon&quot;:&quot;18.068&quot;}">Budapest, Hungary</option>
+                <option value="{&quot;lat&quot;:&quot;51.483&quot;,&quot;lon&quot;:&quot;-3.168&quot;}">Cardiff, Wales, UK</option>
+                <option value="{&quot;lat&quot;:&quot;50.937&quot;,&quot;lon&quot;:&quot;6.96&quot;}">Cologne, Germany</option>
+                <option value="{&quot;lat&quot;:&quot;55.676&quot;,&quot;lon&quot;:&quot;12.568&quot;}">Copenhagen, Denmark</option>
+                <option value="{&quot;lat&quot;:&quot;51.898&quot;,&quot;lon&quot;:&quot;-8.475&quot;}">Cork, Ireland</option>
+                <option value="{&quot;lat&quot;:&quot;53.349&quot;,&quot;lon&quot;:&quot;-6.260&quot;}">Dublin, Ireland</option>
+                <option value="{&quot;lat&quot;:&quot;55.953&quot;,&quot;lon&quot;:&quot;-3.188&quot;}">Edinburgh, Scotland, UK</option>
+                <option value="{&quot;lat&quot;:&quot;43.7696&quot;,&quot;lon&quot;:&quot;11.255&quot;}">Florence, Italy</option>
+                <option value="{&quot;lat&quot;:&quot;50.110&quot;,&quot;lon&quot;:&quot;8.682&quot;}">Frankfurt, Germany</option>        
+                <option value="{&quot;lat&quot;:&quot;43.254&quot;,&quot;lon&quot;:&quot;6.637&quot;}">French Riviera, France</option>
+                <option value="{&quot;lat&quot;:&quot;32.650&quot;,&quot;lon&quot;:&quot;-16.908&quot;}">Funchal, Madeira, Portugual</option>
+                <option value="{&quot;lat&quot;:&quot;36.140&quot;,&quot;lon&quot;:&quot;-5.353&quot;}">Gibraltar, British Territory</option>   
+                <option value="{&quot;lat&quot;:&quot;57.708&quot;,&quot;lon&quot;:&quot;11.974&quot;}">Gothenburg, Sweden</option>     
+                <option value="{&quot;lat&quot;:&quot;53.548&quot;,&quot;lon&quot;:&quot;9.987&quot;}">Hamburg, Germany</option>
+                <option value="{&quot;lat&quot;:&quot;60.169&quot;,&quot;lon&quot;:&quot;24.938&quot;}">Helsinki, Finland</option>
+                <option value="{&quot;lat&quot;:&quot;39.020&quot;,&quot;lon&quot;:&quot;1.482&quot;}">Ibiza, Spain</option>
+                <option value="{&quot;lat&quot;:&quot;50.450&quot;,&quot;lon&quot;:&quot;30.523&quot;}">Kyiv, Ukraine</option>
+                <option value="{&quot;lat&quot;:&quot;61.115&quot;,&quot;lon&quot;:&quot;10.466&quot;}">Lillehammer, Norway</option>
+                <option value="{&quot;lat&quot;:&quot;38.722&quot;,&quot;lon&quot;:&quot;-9.139&quot;}">Lisbon, Portugual</option>
+                <option value="{&quot;lat&quot;:&quot;51.507&quot;,&quot;lon&quot;:&quot;-0.127&quot;}">London, England, UK</option>        
+                <option value="{&quot;lat&quot;:&quot;40.416&quot;,&quot;lon&quot;:&quot;-3.703&quot;}">Madrid, Spain</option>
+                <option value="{&quot;lat&quot;:&quot;39.695&quot;,&quot;lon&quot;:&quot;3.017&quot;}">Mallorca, Spain</option>
+                <option value="{&quot;lat&quot;:&quot;53.480&quot;,&quot;lon&quot;:&quot;-2.242&quot;}">Manchester, England, UK</option>        
+                <option value="{&quot;lat&quot;:&quot;43.296&quot;,&quot;lon&quot;:&quot;5.369&quot;}">Marseille, France</option>
+                <option value="{&quot;lat&quot;:&quot;27.760&quot;,&quot;lon&quot;:&quot;-15.586&quot;}">Maspalomas, Gran Canaria, Spain</option>
+                <option value="{&quot;lat&quot;:&quot;45.464&quot;,&quot;lon&quot;:&quot;9.190&quot;}">Milan, Italy</option>
+                <option value="{&quot;lat&quot;:&quot;48.135&quot;,&quot;lon&quot;:&quot;11.582&quot;}">Munich, Germany</option>
+                <option value="{&quot;lat&quot;:&quot;40.851&quot;,&quot;lon&quot;:&quot;14.268&quot;}">Naples, Italy</option>
+                <option value="{&quot;lat&quot;:&quot;43.034&quot;,&quot;lon&quot;:&quot;-2.417&quot;}">Oñati, Basque Country, Spain</option>
+                <option value="{&quot;lat&quot;:&quot;59.913&quot;,&quot;lon&quot;:&quot;10.752&quot;}">Oslo, Norway</option>
+                <option value="{&quot;lat&quot;:&quot;48.856&quot;,&quot;lon&quot;:&quot;2.352&quot;}">Paris, France</option>
+                <option value="{&quot;lat&quot;:&quot;50.075&quot;,&quot;lon&quot;:&quot;14.437&quot;}">Prague, Czech Republic</option>
+                <option value="{&quot;lat&quot;:&quot;64.146&quot;,&quot;lon&quot;:&quot;-21.942&quot;}">Reykjavík, Iceland</option>
+                <option value="{&quot;lat&quot;:&quot;56.879&quot;,&quot;lon&quot;:&quot;24.603&quot;}">Riga, Latvia</option>
+                <option value="{&quot;lat&quot;:&quot;41.902&quot;,&quot;lon&quot;:&quot;12.496&quot;}">Rome, Italy</option>
+                <option value="{&quot;lat&quot;:&quot;39.453&quot;,&quot;lon&quot;:&quot;-31.127&quot;}">Santa Cruz das Flores, Azores, Portugual</option>
+                <option value="{&quot;lat&quot;:&quot;28.463&quot;,&quot;lon&quot;:&quot;-16.251&quot;}">Santa Cruz de Tenerife, Tenerife, Spain</option>
+                <option value="{&quot;lat&quot;:&quot;57.273&quot;,&quot;lon&quot;:&quot;-6.215&quot;}">Skye, Scotland, UK</option>
+                <option value="{&quot;lat&quot;:&quot;42.697&quot;,&quot;lon&quot;:&quot;23.321&quot;}">Sofia, Bulgaria</option>
+                <option value="{&quot;lat&quot;:&quot;59.329&quot;,&quot;lon&quot;:&quot;18.068&quot;}">Stockholm, Sweden</option>
+                <option value="{&quot;lat&quot;:&quot;59.437&quot;,&quot;lon&quot;:&quot;24.753&quot;}">Tallinn, Estonia</option>
+                <option value="{&quot;lat&quot;:&quot;18.208&quot;,&quot;lon&quot;:&quot;16.373&quot;}">Vienna, Austria</option>
+                <option value="{&quot;lat&quot;:&quot;52.229&quot;,&quot;lon&quot;:&quot;21.012&quot;}">Warsaw, Poland</option>
+                <option value="{&quot;lat&quot;:&quot;53.961&quot;,&quot;lon&quot;:&quot;-1.07&quot;}">York, England, UK</option>
+                <option value="{&quot;lat&quot;:&quot;47.376&quot;,&quot;lon&quot;:&quot;8.541&quot;}">Zurich, Switzerland</option>
+                </select>
+        </form>
+        <div class="results-div" id="results">
+            
+            <div class="weather-info">
+                
+               
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    
+    
+</body>
+
+<footer>
+    <div class="section-divider">
+        <img src="images/cloudline.png">
+    </div>
+    
+    <p class="copyright-text">© Copyright 2024 by Lahmar Ameni </p>
+</footer>
+<!-- JQuery Script -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+<!-- Bootstrap Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<!-- JS code -->
+<script src="js/main.js"></script>
+
+
+</html>

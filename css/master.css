@@ -1,0 +1,108 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: linear-gradient(135deg, #81d4faff, #0165b1) ;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    min-height: 100vh;
+}
+.hero{
+    width: 100%;
+}
+h1{
+    text-align: center;
+    font-size: 2.3rem;
+    margin: 30px 0;
+    color: #fff;
+}
+select {
+    padding: 10px;
+    width: 25%;
+    border-radius: 10px;
+    font-family: inherit;
+}
+.section-description{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.api{
+    padding: 10px 0 30px;
+    color: #fff;
+}
+.api a {
+    text-decoration: none;
+    color: #fff;
+}
+.keyword-magnet {
+    padding: 0 10px;
+    border: 1px solid #fff;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+form{
+    margin-left: auto;
+    margin-right: auto;
+}
+.results-div{
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.card {
+    padding: 25px;
+    border: 1px solid #0794f2;
+    border-radius: 15px;
+    background: #f4f6f740;
+    box-shadow: 2px 5px 6px #b2e6f957;
+}
+.weather-date {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #3F51B5;
+    font-family: cursive;
+}
+.weather-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.weather-icon {
+    margin: 20px 0 30px 0;
+}
+.description {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fff;
+}
+.temperature {
+    font-size: 1rem;
+    color: #261a85;
+    font-weight: 500;
+    padding: 20px 0;
+}
+footer{
+    margin: auto;
+    text-align: center;
+    text-shadow: 2px 2px 5px black;
+}
+footer .section-divider {
+    margin: 2rem auto;
+    opacity: .75;
+}
+footer .section-divider img {
+    vertical-align: middle;
+    border-style: none;
+    width: 90%;
+}
+footer .copyright-text{
+    text-align: center;
+    font-size: 14px;
+    color: #becbff;
+}
