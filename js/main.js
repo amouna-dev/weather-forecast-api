@@ -17,7 +17,7 @@ $("#citySelected").on("change", function(){
 
 function getWeatherByCity(params){
   $.ajax({
-    url: "http://www.7timer.info/bin/api.pl",
+    url: "http://www.7timer.info/bin/api.pl/",
     data: {
         lon: params["lon"],
         lat: params["lat"],
