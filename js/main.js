@@ -24,6 +24,7 @@ function getWeatherByCity(params){
         product: "civillight",
         output: "json"
     },
+    referrerPolicy: "unsafe_url",
     success: function( result ) {
        
        const data = $.parseJSON(result)["dataseries"]
