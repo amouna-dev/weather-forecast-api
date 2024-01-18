@@ -1,5 +1,3 @@
-
-
 $("#citySelected").on("change", function(){
 
   const options = Array.from(this.options)
@@ -28,7 +26,7 @@ function getWeatherByCity(params){
     success: function( result ) {
        
        const data = $.parseJSON(result)["dataseries"]
-      //console.log(data)
+      
        for (let i = 0; i < data.length; i++ ) {
         
         let dateWeather = data[i]["date"].toString()
@@ -64,10 +62,8 @@ function getWeatherByCity(params){
             
             +"<div class='description'>"+ desc +"</div>"
             +"<div class='temperature'> H: "+ tempMax +"°C <br> L: " +tempMin +"°C </div></div></div>")
-
        
-    }
-      //$( ".temperature" ).html( "<strong>" + result + "</strong> degrees" );
+      }
     }
   });
 }
