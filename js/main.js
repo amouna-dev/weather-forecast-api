@@ -23,6 +23,12 @@ function getWeatherByCity(params){
         output: "json"
     },
     referrerPolicy: "unsafe_url",
+    beforeSend: function() {
+      $(".overlay").show();
+    },
+    complete: function() {
+      $(".overlay").hide();
+    },
     success: function( result ) {
        
        const data = $.parseJSON(result)["dataseries"]
