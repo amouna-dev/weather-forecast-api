@@ -1,19 +1,46 @@
+let degree = "&#8451"
+
+var cToF = function(c) {
+  return (c * (9/5)) + 32;
+};
+
 $("#citySelected").on("change", function(){
 
   const options = Array.from(this.options)
   const optionToSelect = options.find(item => item.value === this.value);
   const paramsCity = $.parseJSON(optionToSelect.value)
-  const cityName = optionToSelect.text
-      
-  $("#results .weather-info").html("")
+  const cityName = optionToSelect.text   
+  let temp = "C"
     
-  getWeatherByCity(paramsCity)
+  $("#results .weather-info").html("")
+  
+  if (degree == '&#8457') temp = "F"  
+
+  getWeatherByCity(paramsCity, temp)
  
 })
 
+$("#toggleBtn").on('click',function() {
 
+  if (degree == '&#8451') { //if degree is celsius
 
-function getWeatherByCity(params){
+      degree = '&#8457' //change degree to fahrenheit
+      $("#temperature .deg").html(degree)
+      $('#toggleBtn span').html("&#8451") 
+      
+      if($("#citySelected").val()) getWeatherByCity($.parseJSON($("#citySelected").val()), 'F')
+  }
+  else if (degree == '&#8457') { //if degree is fahrenheit
+
+      degree = '&#8451' //change degree to celsius
+      $("#temperature .deg").html(degree)
+      $('#toggleBtn span').html("&#8457") 
+      
+      if($("#citySelected").val()) getWeatherByCity($.parseJSON($("#citySelected").val()), 'C')
+  }
+});
+
+function getWeatherByCity(params, temp="C"){
   $.ajax({
     url: "http://www.7timer.info/bin/api.pl/",
     data: {
@@ -40,7 +67,12 @@ function getWeatherByCity(params){
         let tempMin = Math.round(data[i]["temp2m"]["min"])
         let tempMax = data[i]["temp2m"]["max"]
         //let wind = data[i]["wind10m_max"]
-
+        
+        if(temp == "F"){
+          tempMax = cToF(tempMax)
+          tempMin = cToF(tempMin)
+        }
+         
         let d = new Date(dateWeather.substring(0, 4),dateWeather.substring(4, 6)-1,dateWeather.substring(6, 8));
         dateWeather = d.toString().substring(0, 10)
         let desc = weather
@@ -67,7 +99,7 @@ function getWeatherByCity(params){
             "<div class='weather-icon'> <img src='./images/"+ weather +".png'> </div>"
             
             +"<div class='description'>"+ desc +"</div>"
-            +"<div class='temperature'> H: "+ tempMax +"°C <br> L: " +tempMin +"°C </div></div></div>")
+            +"<div class='temperature'> H: "+ tempMax +" °"+temp+ " <br> L: " +tempMin +" °"+temp+ " </div></div></div>")
        
       }
     }
