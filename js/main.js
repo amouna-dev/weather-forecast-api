@@ -100,8 +100,8 @@ function getWeatherByCity(params, temp="C"){
             + "<h5 class='weather-date'>" + dateWeather +"</h5>" +
             "<div class='weather-icon'> <img src='./images/"+ weather +".png'> </div>"
             
-            +"<div class='description'>"+ desc +"</div>"
-            +"<div class='temperature'> H: "+ tempMax +" °"+temp+ " <br> L: " +tempMin +" °"+temp+ " </div></div></div>")
+            +"<div class='weather-description'>"+ desc +"</div>"
+            +"<div class='weather-temperature'> H: "+ tempMax +" °"+temp+ " <br> L: " +tempMin +" °"+temp+ " </div></div></div>")
        
       }
     }
