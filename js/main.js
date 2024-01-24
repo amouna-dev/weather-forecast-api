@@ -71,8 +71,8 @@ function getWeatherByCity(params, temp="C"){
         //let wind = data[i]["wind10m_max"]
         
         if(temp == "F"){
-          tempMax = cToF(tempMax)
-          tempMin = cToF(tempMin)
+          tempMax = Math.round(cToF(tempMax))
+          tempMin = Math.round(cToF(tempMin))
         }
          
         let d = new Date(dateWeather.substring(0, 4),dateWeather.substring(4, 6)-1,dateWeather.substring(6, 8));
