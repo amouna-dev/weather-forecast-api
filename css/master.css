@@ -45,14 +45,25 @@ form{
     margin-left: auto;
     margin-right: auto;
 }
+#temperature{
+    margin: 1.5rem 0;
+    font-size: 1.1rem;
+    font-family: cursive;
+    color: #fff;
+}
+#toggleBtn{
+    background: transparent;
+    border: none;
+    margin-left: 15px;
+    font-size: 1.1rem;
+    color: #02fefe;
+    cursor: pointer;
+}
 .overlay {
     display: none;
 }
 .results-div{
     margin: 40px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
 }
 .card {
@@ -78,13 +89,13 @@ form{
 .weather-icon {
     margin: 20px 0 30px 0;
 }
-.description {
+.weather-description {
     font-size: 0.9rem;
     font-weight: 500;
     text-transform: uppercase;
     color: #fff;
 }
-.temperature {
+.weather-temperature {
     font-size: 1rem;
     color: #261a85;
     font-weight: 500;
