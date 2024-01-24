@@ -59,6 +59,8 @@ function getWeatherByCity(params, temp="C"){
     success: function( result ) {
        
        const data = $.parseJSON(result)["dataseries"]
+
+      $("#results .weather-info").html("")
       
        for (let i = 0; i < data.length; i++ ) {
         
